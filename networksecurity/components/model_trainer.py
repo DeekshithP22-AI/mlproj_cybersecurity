@@ -15,8 +15,6 @@ from networksecurity.utils.main_utils.utils import load_numpy_array_data
 from networksecurity.utils.ml_utils.metric.classification_metric import get_classification_score
 
 
-
-
 class ModelTrainer:
 
     def __init__(self,model_trainer_config:ModelTrainerConfig,
