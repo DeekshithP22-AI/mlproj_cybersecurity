@@ -52,13 +52,12 @@ class NetworkDataExtract():
             return len(self.records)
             
             
-            
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
 if __name__ == '__main__':
     FILE_PATH="./Network_Data/NetworkData.csv"
-    DATABASE="KNAcademy"
+    DATABASE="Cybs_MLproj"
     COLLECTION="NetworkData"
     networobj = NetworkDataExtract()
     records = networobj.csv_to_json_convertor(FILE_PATH)
