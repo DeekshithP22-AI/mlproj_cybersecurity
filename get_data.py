@@ -34,6 +34,7 @@ class NetworkDataExtract():
         except Exception as e:
             raise NetworkSecurityException(e, sys)
     
+    
     def pushing_data_to_mongodb(self,records, database,collection):
         try:
             self.database=database
