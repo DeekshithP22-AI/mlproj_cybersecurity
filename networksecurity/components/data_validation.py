@@ -8,6 +8,7 @@ from scipy.stats import ks_2samp
 import pandas as pd
 import os,sys
 
+
 class DataValidation:
     def __init__(self,data_ingestion_artifact:DataIngestionArtifact,
                  data_validation_config:DataValidationConfig):
