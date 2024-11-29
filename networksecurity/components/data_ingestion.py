@@ -27,6 +27,7 @@ class DataIngestion:
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
+        
     def export_collection_as_dataframe(self):
         try:
             database_name=self.data_ingestion_config.database_name
@@ -45,6 +46,7 @@ class DataIngestion:
             
         except Exception as e:
             raise NetworkSecurityException(e,sys)
+        
         
     def export_data_into_feature_store(self,dataframe: pd.DataFrame):
         try:
@@ -88,6 +90,7 @@ class DataIngestion:
             
         except Exception as e:
             raise NetworkSecurityException(e,sys)
+        
         
     def initiate_data_ingestion(self):
         try:
