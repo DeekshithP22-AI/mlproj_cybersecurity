@@ -18,17 +18,20 @@ PREPROCESSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 MODEL_FILE_NAME = "model.pkl"
 SCHEMA_FILE_PATH = os.path.join("data_schema", "schema.yaml")
 SCHEMA_DROP_COLS = "drop_columns"
+
 SAVED_MODEL_DIR =os.path.join("saved_models")
+
 
 """
 Data Ingestion related constant start with DATA_INGESTION VAR NAME
 """
 DATA_INGESTION_COLLECTION_NAME: str = "NetworkData"
-DATA_INGESTION_DATABASE_NAME: str = "KNAcademy"
+DATA_INGESTION_DATABASE_NAME: str = "Cybs_MLproj"
 DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 DATA_INGESTION_INGESTED_DIR: str = "ingested"
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATION: float = 0.2
+
 
 
 """
@@ -41,6 +44,8 @@ DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report"
 DATA_VALIDATION_DRIFT_REPORT_FILE_NAME: str = "report.yaml"
 
 """
+
+
 Data Transformation related constant start with DATA_TRANSFORMATION VAR NAME
 """
 DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
@@ -57,6 +62,8 @@ DATA_TRANSFORMATION_TRAIN_FILE_PATH: str = "train.npy"
 
 DATA_TRANSFORMATION_TEST_FILE_PATH: str = "test.npy"
 
+
+
 """
 Model Trainer ralated constant start with MODE TRAINER VAR NAME
 """
@@ -68,7 +75,9 @@ MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
 MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD: float = 0.05
 
 """
-Model Evalaution ralated constant start with MODE TRAINER VAR NAME
+
+
+Model Evalaution related constant start with MODE TRAINER VAR NAME
 """
 MODEL_EVALUATION_DIR_NAME: str = "model_evaluation"
 MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
