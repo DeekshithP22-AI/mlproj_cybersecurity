@@ -17,6 +17,7 @@ os.environ["AWS_SECRET_ACCESS_KEY"]=AWS_SECRET_ACCESS_KEY
 
 import pymongo
 
+
 from networksecurity.constant.training_pipeline import DATA_INGESTION_COLLECTION_NAME
 from networksecurity.constant.training_pipeline import DATA_INGESTION_DATABASE_NAME
 from fastapi.responses import HTMLResponse
