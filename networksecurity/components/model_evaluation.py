@@ -106,16 +106,16 @@ class ModelEvaluation:
             write_yaml_file(self.model_eval_config.report_file_path, model_eval_report)
             logging.info(f"Model evaluation artifact: {model_evaluation_artifact}")
             
-            # with mlflow.start_run():
-            #     f1_score=trained_metric.f1_score
-            #     precision_score=trained_metric.precision_score
-            #     recall_score=trained_metric.recall_score
+            with mlflow.start_run():
+                f1_score=trained_metric.f1_score
+                precision_score=trained_metric.precision_score
+                recall_score=trained_metric.recall_score
                 
-            #     mlflow.log_metric("f1_score",f1_score)
-            #     mlflow.log_metric("precision_score",precision_score)
-            #     mlflow.log_metric("recall_score",recall_score)
+                mlflow.log_metric("f1_score",f1_score)
+                mlflow.log_metric("precision_score",precision_score)
+                mlflow.log_metric("recall_score",recall_score)
                 
-            #     mlflow.sklearn.log_model(train_model,"model")
+                mlflow.sklearn.log_model(train_model,"model")
                 
             return model_evaluation_artifact
         except Exception as e:
