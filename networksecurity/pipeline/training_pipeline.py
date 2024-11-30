@@ -8,7 +8,7 @@ from networksecurity.components.data_ingestion import DataIngestion
 from networksecurity.components.data_validation import DataValidation
 from networksecurity.components.data_transformation import DataTransformation
 from networksecurity.components.model_trainer import ModelTrainer
-# from networksecurity.components.model_evaluation import ModelEvaluation
+from networksecurity.components.model_evaluation import ModelEvaluation
 # from networksecurity.components.model_pusher import ModelPusher
 
 from networksecurity.entity.config_entity import(
@@ -17,7 +17,7 @@ from networksecurity.entity.config_entity import(
     DataValidationConfig,
     DataTransformationConfig,
     ModelTrainerConfig,
-    # ModelEvaluationConfig,
+    ModelEvaluationConfig,
     # ModelPusherConfig
    
 )
@@ -92,16 +92,16 @@ class TrainingPipeline:
         except Exception as e:
             raise NetworkSecurityException(e, sys)
         
-    # def start_model_evaluation(self,data_validation_artifact:DataValidationArtifact,
-    #                              model_trainer_artifact:ModelTrainerArtifact,):
-    #     try:
-    #         model_evaluation_config:ModelEvaluationConfig=ModelEvaluationConfig(training_pipeline_config=self.training_pipeline_config)
-    #         model_eval=ModelEvaluation(model_evaluation_config,data_validation_artifact,model_trainer_artifact)
-    #         model_eval_artifact=model_eval.initiate_model_evaluation()
-    #         return  model_eval_artifact
+    def start_model_evaluation(self,data_validation_artifact:DataValidationArtifact,
+                                 model_trainer_artifact:ModelTrainerArtifact,):
+        try:
+            model_evaluation_config:ModelEvaluationConfig=ModelEvaluationConfig(training_pipeline_config=self.training_pipeline_config)
+            model_eval=ModelEvaluation(model_evaluation_config,data_validation_artifact,model_trainer_artifact)
+            model_eval_artifact=model_eval.initiate_model_evaluation()
+            return  model_eval_artifact
 
-    #     except Exception as e:
-    #         raise NetworkSecurityException(e,sys)
+        except Exception as e:
+            raise NetworkSecurityException(e,sys)
         
     # def start_model_pusher(self,model_eval_artifact:ModelEvaluationArtifact):
     #     try:
