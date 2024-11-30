@@ -61,6 +61,7 @@ class ModelEvaluation:
                     trained_model_path=train_model_file_path, 
                     train_model_metric_artifact=self.model_trainer_artifact.test_metric_artifact, 
                     best_model_metric_artifact=None)
+                
                 logging.info(f"Model evaluation artifact: {model_evaluation_artifact}")
                 model_eval_report = model_evaluation_artifact.__dict__
 
